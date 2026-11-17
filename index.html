@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff7f8" />
+  <meta name="description" content="A Little World of Itaa — a little space, made just for you." />
+  <title>A Little World of Itaa ♡</title>
+
+  <!-- Tailwind CSS CDN: cocok untuk prototype / website statis -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: "#f6dfe5",
+            rosewood: "#a86f7d",
+            ink: "#493b40",
+            cream: "#fffaf8"
+          },
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Playfair Display", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div id="petal-layer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="A Little World of Itaa, beranda">
+      <span class="brand-mark">♡</span>
+      <span>A Little World <i>of Itaa</i></span>
+    </a>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#favorites">Favorites</a>
+      <a href="#rbx">Aliipp & Itaa</a>
+      <a href="#letter" class="nav-cta">A little note <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A PERSONAL LITTLE CORNER</p>
+        <h1>A Little World<br><em>of Itaa.</em></h1>
+        <p class="hero-subtitle">A little space, made just for you <span>♡</span></p>
+        <p class="hero-description">Tempat kecil untuk menyimpan cerita, hal-hal sederhana, dan semua keindahan tentang Itaa.</p>
+        <a href="#about" class="primary-button">Explore her world <span>↓</span></a>
+        <div class="hero-footnote"><span class="tiny-flower">✿</span> made with a little extra love</div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-photo-frame">
+          <img src="assets/images/itaa-1.jpeg" alt="Foto Itaa mengenakan hijab warna krem" class="hero-photo" />
+        </div>
+        <div class="floating-note note-top"><span>✿</span> lovely soul</div>
+        <div class="floating-note note-bottom">the world feels softer <b>♡</b></div>
+        <span class="hero-sparkle sparkle-one">✧</span>
+        <span class="hero-sparkle sparkle-two">✳</span>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section id="about" class="about-section section-wrap section-space">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 — A LITTLE INTRODUCTION</p>
+        <h2>Meet <em>Itaa</em></h2>
+        <p class="section-lead">Some people make ordinary moments feel a little more beautiful.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="assets/images/itaa-2.jpeg" alt="Foto Itaa dengan cardigan pink" loading="lazy" />
+          <span class="image-caption">a moment to remember · ♡</span>
+        </div>
+        <div class="about-copy reveal">
+          <span class="decorative-flower">✿</span>
+          <p class="small-label">HELLO, IT'S GITAA</p>
+          <h3>A name that feels<br><em>like a warm hello.</em></h3>
+          <p>Hai, Itaa! Website kecil ini dibuat sebagai ruang sederhana untuk merayakan hal-hal yang membuatmu menjadi dirimu sendiri.</p>
+          <p>Mulai dari senyum, cerita, sampai hal-hal kecil yang mungkin sering terlupakan — semuanya pantas punya tempat untuk dikenang.</p>
+          <div class="signature">with love, <span>♡</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section section-wrap section-space">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow">02 — LITTLE MOMENTS</p>
+        <h2>Her little <em>gallery</em></h2>
+        <p class="section-lead">A few captured moments, kept in one lovely place.</p>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-card gallery-tall reveal" data-full="assets/images/itaa-1.jpeg" aria-label="Lihat foto Itaa pertama">
+          <img src="assets/images/itaa-1.jpeg" alt="Itaa dengan hijab krem" loading="lazy" />
+          <span class="gallery-overlay"><span>little moment no. 01</span><b>↗</b></span>
+        </button>
+        <button class="gallery-card reveal" data-full="assets/images/itaa-2.jpeg" aria-label="Lihat foto Itaa kedua">
+          <img src="assets/images/itaa-2.jpeg" alt="Itaa dengan cardigan pink" loading="lazy" />
+          <span class="gallery-overlay"><span>little moment no. 02</span><b>↗</b></span>
+        </button>
+        <div class="gallery-note reveal">
+          <span class="note-flower">✿</span>
+          <p>“Collect moments,<br><em>not things.</em>”</p>
+          <span class="note-byline">— a little reminder</span>
+        </div>
+      </div>
+      <p class="gallery-hint">Klik foto untuk melihat lebih dekat ♡</p>
+    </section>
+
+    <section id="favorites" class="favorites-section section-wrap section-space">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow">03 — THE LITTLE THINGS</p>
+        <h2>Things that make <em>her, her.</em></h2>
+        <p class="section-lead">Bagian ini bisa kamu isi dengan hal-hal favorit Itaa.</p>
+      </div>
+      <div class="favorite-grid">
+        <article class="favorite-card reveal"><span class="favorite-icon">♡</span><p class="favorite-label">HER FAVORITE COLOR</p><h3>Soft Pink</h3><p>Warna lembut yang manis dan hangat.</p></article>
+        <article class="favorite-card reveal"><span class="favorite-icon">♫</span><p class="favorite-label">ON REPEAT</p><h3>LANY — Stuck</h3><p>Lagu yang selalu ada di playlist Itaa, terasa pas di setiap momen.</p></article>
+        <article class="favorite-card reveal"><span class="favorite-icon">🦐</span><p class="favorite-label">LITTLE HAPPINESS</p><h3>Seafood</h3><p>Makanan favorit Itaa — dari udang, cumi, sampai ikan, semuanya bikin happy!</p></article>
+      </div>
+    </section>
+
+    <section id="letter" class="letter-section section-wrap section-space">
+      <div class="letter-card reveal">
+        <span class="letter-flower flower-left">✿</span>
+        <span class="letter-flower flower-right">✿</span>
+        <p class="eyebrow">04 — A NOTE FOR YOU</p>
+        <h2>A little note,<br><em>just for Itaa.</em></h2>
+        <p class="letter-intro">Ada pesan kecil yang menunggu untuk dibuka.</p>
+        <button id="open-letter" class="primary-button">Open your little note <span>♡</span></button>
+        <div id="letter-message" class="letter-message" hidden>
+          <div class="letter-divider">✧ &nbsp; ♡ &nbsp; ✧</div>
+          <p>Dear Itaa,</p>
+          <p>Semoga kamu selalu menemukan alasan untuk tersenyum, dikelilingi hal-hal baik, dan tidak pernah lupa bahwa kamu berharga.</p>
+          <p>Keep being your lovely self. The world is a little brighter with you in it. ♡</p>
+          <span class="letter-sign">with a little love</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Roblox Trigger -->
+    <section id="rbx" class="rbx-section section-wrap section-space">
+      <div class="rbx-wrapper reveal">
+        <p class="eyebrow">05 — A LITTLE MEMORY</p>
+        <h2 class="rbx-heading">A little <em>surprise</em><br>just for you ♡</h2>
+        <p class="rbx-desc">Klik kotak hadiahnya untuk membuka kenangan kecil kami ✿</p>
+
+        <!-- Gift Box -->
+        <div id="gift-box" class="gift-box" role="button" tabindex="0" aria-label="Buka kotak hadiah">
+          <!-- Burst flowers container -->
+          <div class="burst-layer" id="burst-layer"></div>
+
+          <!-- Box lid -->
+          <div class="box-lid">
+            <div class="lid-ribbon-h"></div>
+            <div class="bow">
+              <div class="bow-left"></div>
+              <div class="bow-right"></div>
+              <div class="bow-center"></div>
+            </div>
+          </div>
+
+          <!-- Box body -->
+          <div class="box-body">
+            <div class="body-ribbon-v"></div>
+            <span class="box-sparkle sp1">✧</span>
+            <span class="box-sparkle sp2">✿</span>
+            <span class="box-sparkle sp3">✧</span>
+          </div>
+        </div>
+
+        <p class="rbx-hint" id="rbx-hint">klik untuk membuka ♡</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">A Little World <em>of Itaa</em> ♡</a>
+    <p>made with care, just for you.</p>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+  </footer>
+
+
+  <div id="welcome-popup" class="welcome-popup hidden" aria-modal="true" role="dialog" aria-label="Welcome">
+    <div class="welcome-card">
+      <button id="close-welcome" class="welcome-close" aria-label="Tutup">×</button>
+      <p class="welcome-eyebrow"><span>✿</span> A LITTLE SURPRISE</p>
+      <h2 class="welcome-title">Aliipp <em>&amp; Itaa</em></h2>
+      <p class="welcome-sub">main Roblox bareng ♡</p>
+      <div class="welcome-photos">
+        <div class="welcome-photo-wrap">
+          <img src="assets/images/rbx1 (1).jpeg" alt="Aliipp dan Itaa main Roblox" loading="eager" />
+        </div>
+        <div class="welcome-photo-wrap welcome-photo-tilt">
+          <img src="assets/images/rbx1 (2).jpeg" alt="Aliipp dan Itaa main Roblox 2" loading="eager" />
+        </div>
+      </div>
+      <div class="welcome-music">
+        <div class="welcome-music-info">
+          <span class="music-note-icon">♫</span>
+          <div>
+            <p class="music-title">LANY — Stuck</p>
+            <p class="music-label">now playing</p>
+          </div>
+          <button id="toggle-music" class="music-toggle" aria-label="Play/Pause musik">▶</button>
+        </div>
+        <audio id="bg-music" loop>
+          <source src="song/LANY - Stuck (Lyrics).mp4" type="audio/mp4" />
+        </audio>
+      </div>
+      <button id="enter-site" class="welcome-enter">Enter her world <span>♡</span></button>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="close-lightbox" class="lightbox-close" aria-label="Tutup foto">×</button>
+    <img id="lightbox-image" src="" alt="Foto Itaa ukuran besar" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
